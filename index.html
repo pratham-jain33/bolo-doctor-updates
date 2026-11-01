@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bolo Doctor - Android build</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#16181d;
+    --muted:#5f6570;
+    --line:#e4e6ea;
+    --accent:#1a56c4;
+    --accent-ink:#ffffff;
+    --soft:#f5f6f8;
+    --warn-bg:#fff8e6;
+    --warn-line:#e8d9a8;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:28px 20px 64px}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;letter-spacing:-.02em}
+  .sub{color:var(--muted);margin:0 0 26px;font-size:15px}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    background:var(--accent);color:var(--accent-ink);
+    padding:16px 20px;border-radius:12px;font-weight:600;font-size:17px;
+    margin:0 0 8px;
+  }
+  .meta{color:var(--muted);font-size:13px;text-align:center;margin:0 0 30px}
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:34px 0 12px;font-weight:600}
+  ul{margin:0;padding-left:20px}
+  li{margin:0 0 9px}
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:12px;padding:14px 16px;font-size:15px}
+  .kv{margin:0}
+  .kv div{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .kv div:last-child{border-bottom:0}
+  .kv dt{color:var(--muted);flex:0 0 128px;margin:0}
+  .kv dd{margin:0}
+  a{color:var(--accent)}
+  .foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  strong{font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Bolo Doctor</h1>
+  <p class="sub">Android build. Pre-release, not on the Play Store.</p>
+
+  <a class="btn" href="https://github.com/pratham-jain33/bolo-doctor-updates/releases/latest/download/bolo-doctor.apk">Download the app</a>
+  <p class="meta">Version 0.12.1 &middot; 13 MB &middot; Android 8.0 or newer</p>
+
+  <div class="warn">
+    <strong>This is a pre-release build.</strong> It is installed outside the Play Store, so your phone will ask you to allow installs from your browser. It has not been tested by doctors and it is not used by anyone yet.
+  </div>
+
+  <h2>What you need before it will work</h2>
+  <div class="card">
+    <p style="margin:0 0 12px">Bolo Doctor does not have its own servers and does not come with keys. You bring two free API keys:</p>
+    <ul style="margin-bottom:12px">
+      <li><strong>Sarvam</strong> &mdash; turns your speech into text</li>
+      <li><strong>Groq</strong> &mdash; turns that text into a structured note</li>
+    </ul>
+    <p style="margin:0">You create both accounts yourself and you pay those two companies directly. A dictation visit costs roughly <strong>one rupee</strong>. Neither account has needed a card so far, but that is their decision, not ours.</p>
+  </div>
+
+  <h2>Setup</h2>
+  <p style="margin:0 0 12px"><a href="setup-guide.png">Open the setup guide</a> &mdash; one image, six steps, about ten minutes.</p>
+
+  <h2>What it does</h2>
+  <div class="card">
+    <p style="margin:0 0 10px">You speak after a consultation, in Hindi, Kannada, Hinglish or English. Bolo Doctor writes an English note from what you said. You read it, edit it, and approve it. Nothing is saved until you approve.</p>
+    <p style="margin:0">If a medicine name is unclear, it asks. It does not guess.</p>
+  </div>
+
+  <h2>Where your data goes</h2>
+  <div class="card">
+    <dl class="kv">
+      <div><dt>Audio and text</dt><dd>Sent to Sarvam and Groq under your own accounts, then discarded</dd></div>
+      <div><dt>Notes</dt><dd>Stored on your phone only</dd></div>
+      <div><dt>Our servers</dt><dd>None. There are none</dd></div>
+      <div><dt>Your API keys</dt><dd>Encrypted on your phone, never backed up</dd></div>
+    </dl>
+  </div>
+
+  <h2>What it is not</h2>
+  <ul>
+    <li>Not a medical device, and not a substitute for your own judgement</li>
+    <li>Not a replacement for your existing records. Keep them</li>
+    <li>Not accurate by default. It is a draft you correct</li>
+    <li>Not supported. There is one person behind this and no help desk</li>
+    <li>Not open source. This is a private build</li>
+  </ul>
+
+  <div class="foot">
+    Bolo Doctor is built by Pratham Jain, Bengaluru. Free to use, no account, no subscription.
+  </div>
+
+</div>
+</body>
+</html>
